@@ -1,0 +1,11 @@
+{
+  "name": "react-redux-gitub-api-example",
+  "version": "0.0.1",
+  "description": "Simple webapp with React & Redux and github-api",
+  "author": "Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com> (http://github.com/drapegnik)",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
