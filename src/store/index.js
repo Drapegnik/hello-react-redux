@@ -5,15 +5,29 @@
 import { createStore } from 'redux'
 import rootReducer from '../reducers'
 
-export default function configureStore(initialState = {
+const initData = {
     user: {
+        name: 'anonymous',
         login: false
     },
     profile: {
-        username: 'anonymous',
-        repositories: []
+        username: 'test',
+        repositories: [
+            {
+                id: 1,
+                name: 'First',
+                starred: true
+            },
+            {
+                id: 2,
+                name: 'Second',
+                starred: false
+            }
+        ]
     }
-}) {
+};
+
+export default function configureStore(initialState = initData) {
     const store = createStore(rootReducer, initialState);
 
     if (module.hot) {
