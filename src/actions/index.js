@@ -7,4 +7,4 @@ import getProfile from './getProfile';
 import starRepo from './starRepo';
 
 const actions = {login, getProfile, starRepo};
-module.exports = actions;
+export default actions;

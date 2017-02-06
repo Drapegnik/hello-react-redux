@@ -3,27 +3,32 @@
  */
 
 import React, { Component, PropTypes } from 'react';
-import { UsernameInput, RepoList } from '../components';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import actions from '../actions';
+import Profile from '../components/Profile';
 
-@connect(state => ({
-    user: state.user,
-    profile: state.profile
-}))
+@connect(
+    state => ({
+        user: state.user,
+        profile: state.profile
+    }),
+    dispatch => ({
+        actions: bindActionCreators(actions, dispatch)
+    }))
 export default class App extends Component {
 
     static propTypes = {
         user: PropTypes.object.isRequired,
-        profile: PropTypes.object.isRequired
+        profile: PropTypes.object.isRequired,
+        actions: PropTypes.object.isRequired
     };
 
     render() {
         return (
             <div>
                 <h1>Hello world, {this.props.user.name}!</h1>
-                <p>Repositories for: {this.props.profile.username}</p>
-                <UsernameInput/>
-                <RepoList repositories={this.props.profile.repositories}/>
+                <Profile data={this.props.profile} actions={this.props.actions}/>
             </div>
         );
     }
