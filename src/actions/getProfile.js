@@ -4,9 +4,10 @@
 
 import { GET_PROFILE } from './constants';
 
-export default function getProfile(username) {
+export default function getProfile(username, repositories) {
     return {
         type: GET_PROFILE,
-        username
+        username,
+        repositories
     };
 }

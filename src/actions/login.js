@@ -4,9 +4,9 @@
 
 import { LOGIN } from './constants';
 
-export default function login(parameter) {
+export default function login(id) {
     return {
         type: LOGIN,
-        parameter
+        id
     };
 }
