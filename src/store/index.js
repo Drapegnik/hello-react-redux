@@ -2,8 +2,10 @@
  * Created by Drapegnik on 06.02.17.
  */
 
-import { createStore } from 'redux'
-import rootReducer from '../reducers'
+import { createStore, applyMiddleware } from 'redux';
+import createLogger from 'redux-logger';
+import thunk from 'redux-thunk';
+import rootReducer from '../reducers';
 
 const initData = {
     user: {
@@ -11,24 +13,14 @@ const initData = {
         login: false
     },
     profile: {
-        username: 'test',
-        repositories: [
-            {
-                id: 1,
-                name: 'First',
-                starred: true
-            },
-            {
-                id: 2,
-                name: 'Second',
-                starred: false
-            }
-        ]
+        username: '',
+        repositories: []
     }
 };
 
 export default function configureStore(initialState = initData) {
-    const store = createStore(rootReducer, initialState);
+    const logger = createLogger();
+    const store = createStore(rootReducer, initialState, applyMiddleware(thunk, logger));
 
     if (module.hot) {
         module.hot.accept('../reducers', () => {
