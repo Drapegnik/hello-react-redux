@@ -2,10 +2,11 @@
  * Created by Drapegnik on 06.02.17.
  */
 
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
+import DevTools from '../containers/DevTools';
 
 const initData = {
     user: {
@@ -18,9 +19,14 @@ const initData = {
     }
 };
 
+const logger = createLogger();
+const enhancer = compose(
+    applyMiddleware(thunk, logger),
+    DevTools.instrument()
+);
+
 export default function configureStore(initialState = initData) {
-    const logger = createLogger();
-    const store = createStore(rootReducer, initialState, applyMiddleware(thunk, logger));
+    const store = createStore(rootReducer, initialState, enhancer);
 
     if (module.hot) {
         module.hot.accept('../reducers', () => {
