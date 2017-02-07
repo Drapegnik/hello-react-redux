@@ -21,7 +21,7 @@ export default class RepoListItem extends Component {
                 <div className={styles.repoInfo}>
                     <div><span>{this.props.name}</span></div>
                     <div>
-                        <small>{this.props.description}</small>
+                        <small>{emojione.shortnameToUnicode(this.props.description)}</small>
                     </div>
                 </div>
                 <div className={styles.repoActions}>
