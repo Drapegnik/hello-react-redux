@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Drapegnik/hello-react-redux.git"
   },
   "author": "Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com> (http://github.com/drapegnik)",
   "license": "MIT",
