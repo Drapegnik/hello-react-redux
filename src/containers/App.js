@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actions from '../actions';
 import Profile from '../components/Profile';
+import styles from './App.css';
 
 @connect(
     state => ({
@@ -26,8 +27,8 @@ export default class App extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Hello world, {this.props.user.name}!</h1>
+            <div className={styles.app}>
+                <h2>Hello world, {this.props.user.name}!</h2>
                 <Profile data={this.props.profile} actions={this.props.actions}/>
             </div>
         );

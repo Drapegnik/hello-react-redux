@@ -1,0 +1,8 @@
+:local(.bgColor) {
+    color: #5c75b0;
+}
+
+:local(.input) {
+    border-left: 0;
+    border-right: 0;
+}

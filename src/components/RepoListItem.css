@@ -1,0 +1,28 @@
+:local(.repoListItem) {
+    list-style: none;
+    padding: 20px 10px 20px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e3e3e3;
+    display: flex;
+}
+
+:local(.repoInfo) {
+    flex: 1 0 auto;
+}
+
+:local(.repoInfo span) {
+    font-weight: bold;
+}
+
+:local(.repoActions) {
+     flex: 0 0 90px;
+ }
+
+:local(.btnAction), :local(.btnAction):active, :local(.btnAction):focus, :local(.btnAction):hover {
+    margin-right: 5px;
+    color: #5c75b0;
+}
+
+button:focus {
+    outline: 0 !important;
+}

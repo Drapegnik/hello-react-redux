@@ -11,8 +11,8 @@ export default function getProfile(username) {
             .then(response => response.json())
             .then(response => {
                 return response.map(repo => {
-                    const {id, name} = repo;
-                    return {id, name}
+                    const {id, name, description} = repo;
+                    return {id, name, description}
                 })
             })
             .then(data => {
@@ -23,6 +23,8 @@ export default function getProfile(username) {
                 });
             })
             .catch(error => {
+                console.error(error);
+
                 return dispatch({
                     type: GET_PROFILE,
                     payload: error,

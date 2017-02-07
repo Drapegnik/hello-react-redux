@@ -18,7 +18,7 @@ export default class Profile extends Component {
         return (
             <div>
                 <UsernameInput username={username} getProfile={this.props.actions.getProfile}/>
-                <p>Repositories for {username}:</p>
+                <h4 className={username ? '' : 'hide'}>Repositories for {username}:</h4>
                 <RepoList repositories={repositories}/>
             </div>
         );
