@@ -20,7 +20,7 @@ export default class RepoListItem extends Component {
             <li className={styles.repoListItem}>
                 <div className={styles.repoInfo}>
                     <div><span>{this.props.name}</span></div>
-                    <div>
+                    <div className={styles.description}>
                         <small>{emojione.shortnameToUnicode(this.props.description)}</small>
                     </div>
                 </div>

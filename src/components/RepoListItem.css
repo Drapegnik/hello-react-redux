@@ -14,6 +14,10 @@
     font-weight: bold;
 }
 
+:local(.description) {
+    width: 350px;
+}
+
 :local(.repoActions) {
      flex: 0 0 90px;
  }
