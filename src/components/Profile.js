@@ -3,7 +3,7 @@
  */
 
 import React, { Component, PropTypes } from 'react';
-import { UsernameInput, RepoList } from '../components';
+import { UsernameInput, RepoList, ProgressBar, ErrorBox } from '../components';
 
 export default class Profile extends Component {
 
@@ -13,12 +13,14 @@ export default class Profile extends Component {
     };
 
     render() {
-        const {username, repositories} = this.props.data;
+        const {username, repositories, fetching, error, message} = this.props.data;
 
         return (
             <div>
                 <UsernameInput username={username} getProfile={this.props.actions.getProfile}/>
-                <h4 className={username ? '' : 'hide'}>Repositories for {username}:</h4>
+                <ProgressBar show={fetching}/>
+                <h4 className={repositories.length ? '' : 'hide'}>Repositories for {username}:</h4>
+                <ErrorBox error={error} message={message} handleClose={this.props.actions.clearProfile}/>
                 <RepoList repositories={repositories}/>
             </div>
         );

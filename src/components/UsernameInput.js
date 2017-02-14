@@ -15,7 +15,7 @@ export default class UsernameInput extends Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.usernameInput}>
                 <div className='input-group'>
                     <span className={classnames('input-group-addon', styles.bgColor)}>@</span>
                     <input type='text'

@@ -1,3 +1,7 @@
+:local(.usernameInput) {
+    margin-bottom: 20px;
+}
+
 :local(.bgColor) {
     color: #5c75b0;
 }

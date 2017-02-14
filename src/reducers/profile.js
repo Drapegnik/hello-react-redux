@@ -3,17 +3,28 @@
  */
 
 
-import { GET_PROFILE } from '../actions/constants';
+import { GET_PROFILE, CLEAR_PROFILE } from '../actions/constants';
 
 const initialState = {
     username: '',
-    repositories: []
+    repositories: [],
+    fetching: false,
+    error: false,
+    message: ''
 };
 
 export default function page(state = initialState, action) {
     switch (action.type) {
         case GET_PROFILE:
-            return {...state, username: action.username, repositories: action.repositories};
+            const {username, repositories, fetching, error} = action;
+
+            if (error) {
+                return {...state, fetching, error, message: action.payload.message};
+            }
+
+            return {...state, username, repositories, fetching, error};
+        case CLEAR_PROFILE:
+            return initialState;
         default:
             return state;
     }
