@@ -14,14 +14,16 @@ export default class RepoList extends Component {
     render() {
         return (
             <ul className={styles.repoList}>
-                {this.props.repositories.map(repo => {
-                    return (<RepoListItem
+                {
+                    this.props.repositories.map(repo => (<RepoListItem
                         key={repo.id}
                         id={repo.id}
                         name={repo.name}
                         description={repo.description || ''}
-                        starred={repo.starred}/>);
-                })}
+                        starred={repo.starred}
+                        url={repo.url}
+                    />))
+                }
             </ul>
         );
     }

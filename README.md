@@ -30,7 +30,7 @@ npm run lint
 
 * [React](https://facebook.github.io/react/)
 * [Redux](http://redux.js.org/)
-* [React-Redux](https://github.com/reactjs/react-redux)
 * [Webpack](https://webpack.github.io/)
+* [react-redux](https://github.com/reactjs/react-redux)
 * [babel-loader](https://github.com/babel/babel-loader)
 * [react-hot-loader](https://github.com/gaearon/react-hot-loader)

@@ -9,27 +9,19 @@ export default function getProfile(username) {
     return dispatch => {
         fetch(`https://api.github.com/users/${username}/repos`)
             .then(response => response.json())
-            .then(response => {
-                return response.map(repo => {
-                    const {id, name, description} = repo;
-                    return {id, name, description}
-                })
-            })
-            .then(data => {
-                return dispatch({
-                    type: GET_PROFILE,
-                    repositories: data,
-                    username
-                });
-            })
-            .catch(error => {
-                console.error(error);
-
-                return dispatch({
-                    type: GET_PROFILE,
-                    payload: error,
-                    error: true
-                });
-            });
+            .then(response => response.map(repo => {
+                const {id, name, description, url} = repo;
+                return {id, name, description, url}
+            }))
+            .then(data => dispatch({
+                type: GET_PROFILE,
+                repositories: data,
+                username
+            }))
+            .catch(error => dispatch({
+                type: GET_PROFILE,
+                payload: error,
+                error: true
+            }));
     }
 }

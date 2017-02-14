@@ -13,13 +13,14 @@ export default class RepoListItem extends Component {
         name: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         starred: PropTypes.bool,
+        url: PropTypes.string.isRequired
     };
 
     render() {
         return (
             <li className={styles.repoListItem}>
                 <div className={styles.repoInfo}>
-                    <div><span>{this.props.name}</span></div>
+                    <div><a href={this.props.url}><span>{this.props.name}</span></a></div>
                     <div className={styles.description}>
                         <small>{emojione.shortnameToUnicode(this.props.description)}</small>
                     </div>

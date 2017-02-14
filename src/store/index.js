@@ -8,24 +8,13 @@ import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 import DevTools from '../containers/DevTools';
 
-const initData = {
-    user: {
-        name: 'anonymous',
-        login: false
-    },
-    profile: {
-        username: '',
-        repositories: []
-    }
-};
-
 const logger = createLogger();
 const enhancer = compose(
     applyMiddleware(thunk, logger),
     DevTools.instrument()
 );
 
-export default function configureStore(initialState = initData) {
+export default function configureStore(initialState) {
     const store = createStore(rootReducer, initialState, enhancer);
 
     if (module.hot) {
