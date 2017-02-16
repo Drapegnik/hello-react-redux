@@ -7,3 +7,4 @@ export { default as RepoList } from './RepoList';
 export { default as RepoListItem } from './RepoListItem';
 export { default as ProgressBar } from './ProgressBar';
 export { default as ErrorBox } from './ErrorBox';
+export { default as Profile } from './Profile';

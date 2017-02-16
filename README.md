@@ -21,7 +21,7 @@ open http://localhost:3000
 ```
 
 ### Linting
-Project includes React-friendly ESLint configuration.
+Project includes React-friendly ESLint configuration with [airbnb standards](https://github.com/airbnb/javascript)
 
 ```
 npm run lint

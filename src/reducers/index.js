@@ -7,8 +7,8 @@ import profile from './profile';
 import user from './user';
 
 const rootReducer = combineReducers({
-    user,
-    profile
+  user,
+  profile,
 });
 
 export default rootReducer;

@@ -5,8 +5,8 @@
 import { LOGIN } from './constants';
 
 export default function login(id) {
-    return {
-        type: LOGIN,
-        id
-    };
+  return {
+    type: LOGIN,
+    id,
+  };
 }

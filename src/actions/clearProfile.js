@@ -5,7 +5,7 @@
 import { CLEAR_PROFILE } from './constants';
 
 export default function clearProfile() {
-    return {
-        type: CLEAR_PROFILE,
-    };
+  return {
+    type: CLEAR_PROFILE,
+  };
 }

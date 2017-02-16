@@ -5,8 +5,8 @@
 import { STAR_REPO } from './constants';
 
 export default function starRepo(id) {
-    return {
-        type: STAR_REPO,
-        id
-    };
+  return {
+    type: STAR_REPO,
+    id,
+  };
 }
