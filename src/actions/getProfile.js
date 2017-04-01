@@ -27,7 +27,8 @@ export default function getProfile(username) {
         return response;
       })
       .then(response => response.map((repo) => {
-        const { id, name, description, url } = repo;
+        const { id, name, description } = repo;
+        const url = repo.html_url;
         return { id, name, description, url };
       }))
       .then((data) => {
