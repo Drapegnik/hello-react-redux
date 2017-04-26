@@ -1,6 +1,8 @@
 # hello-react-redux
 :earth_americas: simple webapp with React &amp; Redux
 
+> check the [website](https://drapegnik.github.io/hello-react-redux/)
+
 Use [github-api](https://developer.github.com/v3/) for auth and getting user repositories list
 
 <img src="http://res.cloudinary.com/dzsjwgjii/image/upload/v1486472848/react-redux.png" width=700px/>
