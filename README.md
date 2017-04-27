@@ -1,4 +1,6 @@
 # hello-react-redux
+[![Code Climate](https://codeclimate.com/github/Drapegnik/hello-react-redux/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/hello-react-redux) [![Issue Count](https://codeclimate.com/github/Drapegnik/hello-react-redux/badges/issue_count.svg)](https://codeclimate.com/github/Drapegnik/hello-react-redux)
+
 :earth_americas: simple webapp with React &amp; Redux
 
 > check the [website](https://drapegnik.github.io/hello-react-redux/)
