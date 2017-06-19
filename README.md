@@ -1,4 +1,7 @@
 # hello-react-redux
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/68155558a3974ceeac27ba65322bcc62)](https://www.codacy.com/app/Drapegnik/hello-react-redux?utm_source=github.com&utm_medium=referral&utm_content=Drapegnik/hello-react-redux&utm_campaign=badger)
+[![Code Climate](https://codeclimate.com/github/Drapegnik/hello-react-redux/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/hello-react-redux) [![Issue Count](https://codeclimate.com/github/Drapegnik/hello-react-redux/badges/issue_count.svg)](https://codeclimate.com/github/Drapegnik/hello-react-redux)
+
 :earth_americas: simple webapp with React &amp; Redux
 
 > check the [website](https://drapegnik.github.io/hello-react-redux/)
